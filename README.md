@@ -11,7 +11,7 @@ Add this line to your application's Gemfile:
 gem 'sinatra_swagger_ui_serve', git: 'https://github.com/surendra83/sinatra_swagger_ui_serve'
 
 ```
-## Contributing
+## uses
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/surendra83/sinatra_swagger_ui_serve
 

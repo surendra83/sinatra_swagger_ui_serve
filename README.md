@@ -22,28 +22,31 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/surend
 ```Ruby
 
 require 'sinatra'
+
 require_relative 'sinatra_swagger_ui_serve'
 
 # Tell the gem whether you want YAML or JSON
-SinatraSwaggerUiServe::Server.registered(self, spec_url: '/swagger.yaml')
+SinatraSwaggerUiServe::Server.registered(spec_url: '/swagger.yaml')
 
 # call server
 use SinatraSwaggerUiServe::Server
 
 # If you want to serve JSON instead:
-# SinatraSwaggerUiServe::Server.registered(self, spec_url: '/swagger.json')
+# SinatraSwaggerUiServe::Server.registered(spec_url: '/swagger.json')
 
 get '/swagger.yaml' do
   content_type 'application/x-yaml'
   File.read('swagger.yaml')
 end
 
+or
+
 get '/swagger.json' do
   content_type 'application/json'
   File.read('swagger.json')
 end
 
-get '/hello' do
+get '/hellow' do
   "Hello, world!"
 end
 
@@ -78,6 +81,11 @@ get '/swagger.yaml' do
 end
 
 ```
+
+## Example 
+Go to the this https://github.com/surendra83/inventory and clone it
+Run the application.
+ 
 
 
 ## License
